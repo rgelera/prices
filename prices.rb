@@ -6,11 +6,7 @@ end
 
 def refund(prices)
   amount = 0
-  index = 0
-  while index < prices.length
-    amount -= prices[index]
-    index += 1
-  end
+  prices.each { |price| amount -= price }
   amount
 end
 
